@@ -3,14 +3,14 @@
 Simple Shopping Cart using Angular Framework for front-end development
 
 ### Components
-Top-bar Component
-Product-details Component
-Product-list Component
-Cart Component
+* Top-bar Component
+* Product-details Component
+* Product-list Component
+* Cart Component
 
 ### Services
-Cart Service
+* Cart Service
 
 ### External
-Bootstrap
-Font Awesome
+* Bootstrap
+* Font Awesome
