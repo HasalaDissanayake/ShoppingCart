@@ -1,0 +1,36 @@
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    padding: 1rem;
+}
+
+div h1 {
+    text-decoration: none;
+    color: white;
+    margin: 0 2rem 0 2rem;
+}
+
+.fancy-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+
+.fancy-button:hover{
+    background-color: aliceblue;
+}
+
+i{
+    color: #1976d2;
+ }
+
+a{
+    text-decoration: none;
+    color: #1976d2;
+}
