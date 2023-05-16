@@ -5,6 +5,12 @@
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price | currency:'LKR' }}</h4>
     <p>{{ product.description }}</p>
+        <div class="btn-list">
+            <button type="button" (click)="addToCart(product)">Add To Cart</button>
+            <button type="button" [routerLink]="'/'">Back To List</button>
+        </div>
+
     </div>
+
 </div>
 
