@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class CartComponent {
   items = this.cartService.getItems();
 
   checkoutForm = this.formBuilder.group({
-    name: '',
-    address: ''
+    name: ['', Validators.required],
+    address: ['', Validators.required]
   });
 
   constructor(
@@ -23,7 +23,7 @@ export class CartComponent {
   
   onSubmit(): void {
       this.items = this.cartService.clearCart();
-      console.warn('Your order has been submitted', this.checkoutForm.value);
+      window.alert('Your order has been submitted');
       this.checkoutForm.reset();
     }
 

@@ -1,28 +1,35 @@
-<div class="cart">
-    <h4>Checkout</h4>
+<div *ngIf="items.length > 0">
 
-    <div class="cart-item" *ngFor="let item of items">
-        <span>{{ item.name }}</span>
-        <span>{{ item.price | currency:'LKR' }}</span>
+    <div class="cart">
+        <h4>Checkout</h4>
+
+        <div class="cart-item" *ngFor="let item of items">
+            <span>{{ item.name }}</span>
+            <span>{{ item.price | currency:'LKR' }}</span>
+        </div>
     </div>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label for="name">
+            Name
+            </label>
+            <input id="name" type="text" formControlName="name" required>
+        </div>
+
+        <div>
+            <label for="address">
+            Address
+            </label>
+            <input id="address" type="text" formControlName="address" required>
+        </div>
+
+        <button class="button" type="submit">Purchase</button>
+
+    </form>
 </div>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
-    <div>
-        <label for="name">
-        Name
-        </label>
-        <input id="name" type="text" formControlName="name">
-    </div>
-
-    <div>
-        <label for="address">
-        Address
-        </label>
-        <input id="address" type="text" formControlName="address">
-    </div>
-
-    <button class="button" type="submit">Purchase</button>
-
-</form>
+<div *ngIf="items.length === 0" class="cart warn">
+    <h4>Your cart is currently empty. Please add items before proceeding to checkout.</h4>
+</div>

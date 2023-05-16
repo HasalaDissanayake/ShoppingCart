@@ -40,3 +40,9 @@ button{
     border: none;
     color: white;
 }
+
+.warn{
+    background-color: #c7dcf1;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
