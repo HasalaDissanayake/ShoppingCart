@@ -24,6 +24,7 @@ div h1 {
 
 .fancy-button:hover{
     background-color: aliceblue;
+    cursor: pointer;
 }
 
 i{
